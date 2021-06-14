@@ -1,0 +1,46 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.439216 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.803922, 0.631373, 0.788235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.447059, 0.305882, 0.439216, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.121569, 0.0901961, 0.113725, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.843137, 0.709804, 0.843137, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.501961, 0.309804, 0.47451, 1 )
+
+[resource]
+Button/colors/font_color = Color( 0.788235, 0.756863, 0.756863, 0 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
+MenuButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+MenuButton/colors/font_color_disabled = Color( 1, 1, 1, 0.3 )
+MenuButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+MenuButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+MenuButton/constants/hseparation = 3
+MenuButton/fonts/font = null
+MenuButton/styles/disabled = null
+MenuButton/styles/focus = null
+MenuButton/styles/hover = SubResource( 6 )
+MenuButton/styles/normal = SubResource( 7 )
+MenuButton/styles/pressed = null

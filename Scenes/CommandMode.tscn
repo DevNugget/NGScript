@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TextEditor.gd" type="Script" id=1]
+[ext_resource path="res://Fontable.tres" type="DynamicFont" id=2]
+[ext_resource path="res://NGScriptDefault.tres" type="Theme" id=3]
+[ext_resource path="res://TextEdit.gd" type="Script" id=4]
+
+[node name="TextEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.141176, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_left = 0.012
+anchor_top = 0.07
+anchor_right = 0.987
+anchor_bottom = 0.973
+margin_left = -0.288
+margin_right = 0.311951
+margin_bottom = 0.199951
+custom_fonts/font = ExtResource( 2 )
+custom_colors/function_color = Color( 0.933594, 0.459503, 0.559507, 1 )
+custom_colors/line_number_color = Color( 0.831373, 0.831373, 0.831373, 1 )
+custom_colors/background_color = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+custom_colors/number_color = Color( 0.243137, 0.784314, 0.831373, 1 )
+syntax_highlighting = true
+show_line_numbers = true
+caret_block_mode = true
+caret_blink = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="."]
+anchor_left = 0.176
+anchor_top = 0.113
+anchor_right = 0.862
+anchor_bottom = 0.878
+margin_left = -0.224014
+margin_top = 0.199997
+margin_right = 0.311951
+margin_bottom = 0.200012
+window_title = "Open a File"
+mode = 0
+access = 2
+current_dir = "/Users/ProDoofNugget12/Documents/Text Editor"
+current_path = "/Users/ProDoofNugget12/Documents/Text Editor/"
+
+[node name="SaveFileButton" type="FileDialog" parent="."]
+anchor_left = 0.176
+anchor_top = 0.113
+anchor_right = 0.862
+anchor_bottom = 0.878
+margin_left = -0.224014
+margin_top = 0.199997
+margin_right = 0.311951
+margin_bottom = 0.200012
+window_title = "Save File"
+access = 2
+current_dir = "/Users/ProDoofNugget12/Documents/Text Editor"
+current_path = "/Users/ProDoofNugget12/Documents/Text Editor/"
+
+[node name="FileMenuButton" type="MenuButton" parent="."]
+anchor_left = 0.015
+anchor_top = 0.028
+anchor_right = 0.183
+anchor_bottom = 0.067
+margin_left = -0.360001
+margin_top = 0.199999
+margin_right = -0.392014
+margin_bottom = -0.200001
+custom_fonts/font = ExtResource( 2 )
+text = "Editor Functions"
+switch_on_hover = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="MenuButton" parent="."]
+anchor_left = 0.015
+anchor_top = 0.028
+anchor_right = 0.183
+anchor_bottom = 0.067
+margin_left = 191.645
+margin_top = -0.955839
+margin_right = 191.613
+margin_bottom = -1.35584
+custom_fonts/font = ExtResource( 2 )
+text = "About"
+switch_on_hover = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutWindow" type="WindowDialog" parent="."]
+anchor_left = 0.207
+anchor_top = 0.207
+anchor_right = 0.788
+anchor_bottom = 0.829
+margin_left = 0.271484
+margin_top = -0.059906
+margin_right = 0.327454
+margin_bottom = -0.259918
+window_title = "Editor Info"
+
+[node name="Label" type="Label" parent="AboutWindow"]
+anchor_left = 0.012
+anchor_top = 0.016
+anchor_right = 0.982
+anchor_bottom = 0.976
+margin_left = -0.14
+margin_top = 0.0319996
+margin_right = -0.290039
+margin_bottom = -0.0480347
+custom_fonts/font = ExtResource( 2 )
+text = "This Text Editor is developed by DevNugget.
+Check it out on youtube @DevNugget
+This was a hobby project and may not meet the standards of a real text editor."
+autowrap = true
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="file_selected" from="SaveFileButton" to="." method="_on_SaveFileButton_file_selected"]

@@ -1,0 +1,224 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TextEditor.gd" type="Script" id=1]
+[ext_resource path="res://Fontable.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Untitled.png" type="Texture" id=3]
+[ext_resource path="res://TextEdit.gd" type="Script" id=4]
+[ext_resource path="res://FSEX300.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://y2mate.com - Zelda  Chill 2 (1).wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[node name="TextEditor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.141176, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchor_left = 0.012
+anchor_top = 0.07
+anchor_right = 0.987
+anchor_bottom = 0.973
+margin_left = -0.288
+margin_right = 0.311951
+margin_bottom = 0.199951
+custom_fonts/font = ExtResource( 2 )
+custom_colors/function_color = Color( 0.933594, 0.459503, 0.559507, 1 )
+custom_colors/line_number_color = Color( 0.831373, 0.831373, 0.831373, 1 )
+custom_colors/background_color = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+custom_colors/number_color = Color( 0.243137, 0.784314, 0.831373, 1 )
+text = "# NGScript v0.1
+#
+# Text editer developed by DevNugget on YouTube
+# Click : Editor Functions : Create New File : to start [ Cntrl + N ]
+# Click : Editor Functions : Import File : to edit an existing file [ Cntrl + E ]
+# DISCLAIMER : NGscript editor is only compatible with GDScript syntax highlighting
+#            : for now, support for other languages will be added soon
+#
+# Discord Server : https://discord.gg/ZPbMDPQwt7 : for support or bug reporting
+# 
+# { Update Info will go here }"
+syntax_highlighting = true
+show_line_numbers = true
+caret_block_mode = true
+caret_blink = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="."]
+anchor_left = 0.176
+anchor_top = 0.113
+anchor_right = 0.862
+anchor_bottom = 0.878
+margin_left = -0.224014
+margin_top = 0.199997
+margin_right = 0.311951
+margin_bottom = 0.200012
+window_title = "Open a File"
+mode = 0
+access = 2
+current_dir = "/Users/ProDoofNugget12/Documents/Text Editor"
+current_path = "/Users/ProDoofNugget12/Documents/Text Editor/"
+
+[node name="SaveFileButton" type="FileDialog" parent="."]
+anchor_left = 0.176
+anchor_top = 0.113
+anchor_right = 0.862
+anchor_bottom = 0.878
+margin_left = -0.224014
+margin_top = 0.199997
+margin_right = 0.311951
+margin_bottom = 0.200012
+window_title = "Save File"
+access = 2
+current_dir = "/Users/ProDoofNugget12/Documents/Text Editor"
+current_path = "/Users/ProDoofNugget12/Documents/Text Editor/"
+
+[node name="FileMenuButton" type="MenuButton" parent="."]
+anchor_left = 0.015
+anchor_top = 0.028
+anchor_right = 0.183
+anchor_bottom = 0.067
+margin_left = -0.360001
+margin_top = 0.199999
+margin_right = -0.392014
+margin_bottom = -0.200001
+custom_fonts/font = ExtResource( 2 )
+text = "Editor Functions"
+switch_on_hover = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="About" type="MenuButton" parent="."]
+anchor_left = 0.015
+anchor_top = 0.028
+anchor_right = 0.183
+anchor_bottom = 0.067
+margin_left = 175.645
+margin_top = -0.955839
+margin_right = 175.613
+margin_bottom = -1.35584
+custom_fonts/font = ExtResource( 2 )
+text = "About"
+switch_on_hover = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AboutWindow" type="WindowDialog" parent="."]
+anchor_left = 0.207
+anchor_top = 0.207
+anchor_right = 0.788
+anchor_bottom = 0.829
+margin_left = 0.271484
+margin_top = -0.059906
+margin_right = 0.327454
+margin_bottom = -0.259918
+window_title = "Editor Info"
+
+[node name="Label" type="Label" parent="AboutWindow"]
+anchor_left = 0.012
+anchor_top = 0.016
+anchor_right = 0.982
+anchor_bottom = 0.976
+margin_left = -0.14
+margin_top = 0.0319996
+margin_right = -0.290039
+margin_bottom = -0.0480347
+custom_fonts/font = ExtResource( 2 )
+text = "This Text Editor is developed by DevNugget.
+Check it out on youtube @DevNugget
+This was a hobby project and may not meet the standards of a real text editor."
+autowrap = true
+
+[node name="NGscript" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -80.0
+margin_top = 6.0
+margin_right = 80.0
+margin_bottom = 46.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -93.0
+margin_top = 8.0
+margin_right = 57.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 1 )
+text = "<NGscript>"
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -53.4351
+margin_top = 21.2132
+margin_right = -13.4351
+margin_bottom = 37.2132
+custom_fonts/font = SubResource( 2 )
+text = "v0.1"
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.702
+anchor_top = 0.026
+anchor_right = 0.791
+anchor_bottom = 0.062
+margin_left = -0.405701
+margin_top = -0.521482
+margin_right = 0.458313
+margin_bottom = -0.121483
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "play music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.796
+anchor_top = 0.024
+anchor_right = 0.886
+anchor_bottom = 0.06
+margin_left = 0.121887
+margin_top = -0.204879
+margin_right = -0.0380859
+margin_bottom = 0.195122
+focus_mode = 0
+custom_fonts/font = ExtResource( 2 )
+text = "stop music"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+[connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="file_selected" from="SaveFileButton" to="." method="_on_SaveFileButton_file_selected"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

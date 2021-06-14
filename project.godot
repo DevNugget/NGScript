@@ -1,0 +1,25 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="NGScript - Loading"
+run/main_scene="res://TextEditor.tscn"
+config/icon="res://New Project - 2021-05-21T135912.576.png"
+config/windows_native_icon="res://new_project___2021_05_21t135912_576_MpE_icon.ico"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
