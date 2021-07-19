@@ -10,3 +10,6 @@ Currently NGScript supports GDScript (Godot's Scripting Language), C# and any ot
 
 # Modifying Policy
 You are allowed to modify the code and GUI but any sort of credit will be greatly appreciated
+
+# Project Editing Errors
+If you run into path errors when trying to open the files in Godot simply ignore and try to run the project, if something is broken please try to correct the path, sorry!
